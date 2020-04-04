@@ -24,4 +24,10 @@ export class TodoComponent implements OnInit {
     //Deletes todo items that have been deleted from the server
     this.todoService.deleteTodo(todo).subscribe();
   }
+
+  addTodo(todo: Todo) {
+    this.todoService.addTodo(todo).subscribe((todo) => {
+      this.todos.push(todo);
+    });
+  }
 }
