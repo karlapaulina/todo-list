@@ -13,6 +13,9 @@ export class TodoComponent implements OnInit {
   constructor(private todoService: TodoDataService) {}
 
   ngOnInit(): void {
-    this.todos = this.todoService.getTodos();
+    //subscribe is like using .then with promises
+    this.todoService.getTodos().subscribe((todos) => {
+      this.todos = todos;
+    });
   }
 }
