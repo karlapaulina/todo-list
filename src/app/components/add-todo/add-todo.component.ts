@@ -7,16 +7,19 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class AddTodoComponent implements OnInit {
   @Output() addTodo: EventEmitter<any> = new EventEmitter();
+
   title: string;
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit() {}
 
   onSubmit() {
     const todo = {
       title: this.title,
       completed: false,
     };
+
     this.addTodo.emit(todo);
   }
 }

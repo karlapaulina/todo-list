@@ -14,6 +14,7 @@ export class TodoItemComponent implements OnInit {
   constructor(private todoService: TodoDataService) {}
 
   ngOnInit(): void {}
+
   //Set Dynamic Classes
   setClasses() {
     let classes = {
